@@ -29,7 +29,7 @@
     <ul>
       <li><strong>Diet &amp; Nutrition</strong> — food entries you log, including name, brand, serving size, macronutrients, micronutrients, meal type, time, and any notes you attach.</li>
       <li><strong>Photos</strong> — photos of meals or nutrition labels that you choose to attach to entries.</li>
-      <li><strong>Health &amp; Fitness</strong> — body composition (weight, BMI, body-fat %, lean mass) read from Apple Health if you grant permission, plus any nutrition data MacroSight writes back to Apple Health if you grant the write permission.</li>
+      <li><strong>Health &amp; Fitness (Apple Health / HealthKit)</strong> — opt-in integration; nothing happens unless you explicitly grant permission. With your permission MacroSight <em>reads</em> body mass, body mass index, body-fat percentage, lean body mass, dietary energy, dietary protein, dietary carbohydrates, and dietary fat from Apple Health. With your permission MacroSight <em>writes</em> dietary energy, protein, carbohydrates, fat, fiber, sugar, sodium, saturated fat, cholesterol, calcium, iron, potassium, vitamin C, vitamin D, and body mass to Apple Health. You choose which of these categories to share in the system permission sheet, and can revoke any of them at any time in iOS Settings &rarr; Health &rarr; Data Access &amp; Devices &rarr; MacroSight. Health data never leaves your device by way of MacroSight.</li>
       <li><strong>App Settings</strong> — display preferences (units, photo quality, AI provider choice, your Anthropic API key if you provide one).</li>
     </ul>
     <p>That's everything. We do <strong>not</strong> collect: names, email addresses, phone numbers, location, contacts, advertising identifiers, device fingerprints, crash analytics tied to a user, or any third-party SDK telemetry.</p>
@@ -89,7 +89,15 @@
     <h2>9. Changes to this policy</h2>
     <p>If this policy materially changes, we'll bump the "Last updated" date at the top and surface the change in the app on next launch.</p>
 
-    <h2>10. Contact</h2>
+    <h2>10. Attributions</h2>
+    <ul>
+      <li><strong>USDA FoodData Central</strong> &mdash; nutrition data and barcode lookups for US-marketed products. Public-domain US Government work; no licence required, attribution provided as best practice. See <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</li>
+      <li><strong>Open Food Facts</strong> &mdash; international barcode and product database, used as a fallback when USDA returns no result. Licensed under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) v1.0</a>; we credit Open Food Facts wherever its data is shown to comply with that licence. See <a href="https://world.openfoodfacts.org/">world.openfoodfacts.org</a>.</li>
+      <li><strong>Anthropic Claude API</strong> &mdash; powers AI-based nutrition estimation when you supply your own API key. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</li>
+      <li><strong>Apple HealthKit</strong> &mdash; device-side framework for the Apple Health integration described above. Apple, Apple Health, and HealthKit are trademarks of Apple Inc.</li>
+    </ul>
+
+    <h2>11. Contact</h2>
     <p>Questions, complaints, or requests: <a href="mailto:support@macrosightapp.com"><strong>support@macrosightapp.com</strong></a></p>
   </main>
 
