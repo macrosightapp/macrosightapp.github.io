@@ -1,0 +1,11 @@
+// Cloudflare Workers config for the Macrosight marketing site.
+// Pure static-assets deploy: serves files from the repo root.
+// Files listed in .assetsignore are excluded from the deploy.
+{
+  "name": "macrosight",
+  "compatibility_date": "2026-05-14",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  }
+}
