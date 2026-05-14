@@ -1,10 +1,15 @@
 // Cloudflare Workers config for the Macrosight marketing site.
-// Pure static-assets deploy: serves files from ./public.
+// src/index.js is a delegate Worker that hands every request to the ASSETS
+// binding, which serves files from ./public. The explicit main+binding pair
+// guarantees the Hello World template that ships with a fresh Workers project
+// gets overwritten on deploy.
 {
   "name": "macrosight",
   "compatibility_date": "2026-05-14",
+  "main": "./src/index.js",
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
     "not_found_handling": "404-page"
   }
 }
