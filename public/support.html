@@ -1,176 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Support — MacroSight</title>
-  <meta name="description" content="Frequently asked questions and support for MacroSight, the private nutrition tracker for iPhone, iPad, Mac, and Apple Watch.">
-  <link rel="canonical" href="https://macrosightapp.github.io/support.html">
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#0a0e1a">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — MacroSight</title>
+<meta name="description" content="Frequently asked questions and support for MacroSight, the private nutrition tracker for iPhone, iPad, Mac, and Apple Watch.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="canonical" href="https://macrosightapp.com/support.html">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site">
-    <a href="/" class="brand">MacroSight</a>
-    <nav>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/support.html" aria-current="page">Support</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="">
+      <span>MacroSight</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html" aria-current="page">Support</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
+<section class="page-hero">
+  <div class="wrap">
     <h1>Support</h1>
-    <p class="lede">Most questions are answered below. If you don't see yours, write to <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a> and we'll get back to you.</p>
+    <p class="meta">Last updated: 2026-05-14</p>
+  </div>
+</section>
 
-    <h2>Getting started</h2>
+<main class="prose">
+  <p>Most questions are answered below. If you don't see yours, write to <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a> and we'll get back to you.</p>
 
-    <details>
-      <summary>How do I sign in?</summary>
-      <p>You don't. MacroSight has no accounts. Just sign into iCloud on your Apple device and your data syncs through your private CloudKit database.</p>
-    </details>
+  <h2>Getting started</h2>
 
-    <details>
-      <summary>Why doesn't my data appear on my other device?</summary>
-      <p>Make sure both devices are signed into the <em>same</em> iCloud account, that iCloud Drive is enabled, and that MacroSight is toggled on under iOS Settings → Apple ID → iCloud → iCloud Drive → Apps using iCloud Drive. New entries usually appear within a minute. If it's been longer, force-quit the app and relaunch.</p>
-    </details>
+  <details>
+    <summary>How do I sign in?</summary>
+    <p>You don't. MacroSight has no accounts. Just sign into iCloud on your Apple device and your data syncs through your private CloudKit database.</p>
+  </details>
 
-    <details>
-      <summary>How do I add a meal?</summary>
-      <p>Tap the camera icon on the dashboard. You can:</p>
-      <ul>
-        <li>Scan a barcode (fast and accurate when the product is in the database)</li>
-        <li>Scan a nutrition label with OCR (works for most US-style facts panels)</li>
-        <li>Take or pick a photo and tap "AI Estimate"</li>
-        <li>Search the USDA / Open Food Facts catalog</li>
-        <li>Type the entry by hand</li>
-      </ul>
-    </details>
+  <details>
+    <summary>Why doesn't my data appear on my other device?</summary>
+    <p>Make sure both devices are signed into the <em>same</em> iCloud account, that iCloud Drive is enabled, and that MacroSight is toggled on under iOS Settings → Apple ID → iCloud → iCloud Drive → Apps using iCloud Drive. New entries usually appear within a minute. If it's been longer, force-quit the app and relaunch.</p>
+  </details>
 
-    <h2>AI estimation</h2>
-
-    <details>
-      <summary>Do I need an AI API key?</summary>
-      <p>Only if you want to use the cloud Claude model. The on-device Apple Foundation Model is also available — toggle it in Settings → AI Provider. The on-device option works without any key and never sends data over the network.</p>
-    </details>
-
-    <details>
-      <summary>Where do I get an Anthropic API key?</summary>
-      <p>Sign in at <a href="https://console.anthropic.com/">console.anthropic.com</a> and create a key. Paste it into Settings → AI Provider in MacroSight. The key is stored in the iOS Keychain on your device only.</p>
-    </details>
-
-    <details>
-      <summary>How accurate is the AI estimate?</summary>
-      <p>Pretty good for plated meals with clear visibility, OK for restaurant photos, weak when ingredients are hidden (sauces, mixed bowls). Always treat the result as a starting point and edit if you know the portion better than the model does.</p>
-    </details>
-
-    <details>
-      <summary>Can I delete my AI key?</summary>
-      <p>Yes — Settings → AI Provider → "Remove Key". This wipes the key from the Keychain. Cloud AI estimation will be disabled until you add a new one.</p>
-    </details>
-
-    <h2>Apple Health</h2>
-
-    <details>
-      <summary>What does MacroSight read from Health?</summary>
-      <p>Body weight, BMI, body-fat percentage, and lean body mass — only with your permission, and only to personalize daily macro targets. You can revoke at any time in iOS Settings → Health → Data Access &amp; Devices → MacroSight.</p>
-    </details>
-
-    <details>
-      <summary>What does MacroSight write to Health?</summary>
-      <p>Each food entry's calories, carbohydrates, protein, fat, fiber, and water — if you grant write permission. This lets other Health-compatible apps see your nutrition.</p>
-    </details>
-
-    <details>
-      <summary>I denied Health access. Can I change my mind?</summary>
-      <p>Yes. iOS Settings → Health → Data Access &amp; Devices → MacroSight, then toggle the categories on.</p>
-    </details>
-
-    <h2>Privacy</h2>
-
-    <details>
-      <summary>Where is my food log stored?</summary>
-      <p>In your private CloudKit database — i.e. your iCloud. The developer cannot read it. Apple operates the storage. See the <a href="/privacy.html">privacy policy</a> for the full breakdown.</p>
-    </details>
-
-    <details>
-      <summary>How do I export my data?</summary>
-      <p>Settings → Data → Export. The app generates a CSV of every food, supplement, water, and weight entry.</p>
-    </details>
-
-    <details>
-      <summary>How do I delete everything?</summary>
-      <ul>
-        <li>In-app: Settings → Data → Clear all data — wipes the local store and matching CloudKit records.</li>
-        <li>iCloud-side: iOS Settings → Apple ID → iCloud → Manage Storage → MacroSight → Delete Data.</li>
-        <li>Removing the app deletes the local copy.</li>
-      </ul>
-    </details>
-
-    <h2>Watch &amp; widgets</h2>
-
-    <details>
-      <summary>Do I need the iPhone app for the watch app?</summary>
-      <p>No — the watch app is standalone. It pairs more cleanly when both are installed (you'll see today's totals from the phone immediately), but the watch can log meals independently if you prefer.</p>
-    </details>
-
-    <details>
-      <summary>The widget is showing zeros after a fresh install.</summary>
-      <p>Open the app once and log (or import) at least one entry. Widgets refresh from the shared App Group container; the first refresh happens after the first sync.</p>
-    </details>
-
-    <details>
-      <summary>The watch face complication isn't updating.</summary>
-      <p>watchOS budgets complication updates aggressively. Open the watch app once to force-refresh, or wait until the next budgeted reload (typically within an hour).</p>
-    </details>
-
-    <h2>Troubleshooting</h2>
-
-    <details>
-      <summary>Sync seems stuck.</summary>
-      <p>Settings → Data → Sync Status will tell you what CloudKit is doing. Common causes: phone is on cellular with iCloud "Wi-Fi only" set, you're out of iCloud storage, or you signed out of iCloud on this device. The status screen surfaces each of those.</p>
-    </details>
-
-    <details>
-      <summary>Barcode scan can't find a product.</summary>
-      <p>USDA and Open Food Facts don't cover everything (especially regional or store-brand items). Use Label Scan or AI Estimate for unknown products, then tap "Save to Favorites" so the next lookup is instant.</p>
-    </details>
-
-    <details>
-      <summary>Label scan is reading numbers wrong.</summary>
-      <p>OCR struggles with reflective labels, low light, and unusual fonts. Try a flat angle, even lighting, and the rear camera if you used the front. You can always edit the parsed values before saving.</p>
-    </details>
-
-    <details>
-      <summary>The app crashed.</summary>
-      <p>Crashes are rare but they happen. Settings → Send Bug Report attaches diagnostics for us automatically. Including the steps you took helps a lot.</p>
-    </details>
-
-    <h2>Accessibility</h2>
-
-    <details>
-      <summary>Is MacroSight VoiceOver-friendly?</summary>
-      <p>Yes — all interactive controls are labeled. If you find an unlabeled or confusingly-labeled element, please email <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a> with the screen name. Accessibility bugs jump the queue.</p>
-    </details>
-
-    <details>
-      <summary>Does it support Dynamic Type?</summary>
-      <p>Yes, including the larger accessibility sizes. If a screen breaks at the largest sizes, that's a bug — please report it.</p>
-    </details>
-
-    <h2>Still stuck?</h2>
-
-    <p>Email <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a> with:</p>
+  <details>
+    <summary>How do I add a meal?</summary>
+    <p>Tap the camera icon on the dashboard. You can:</p>
     <ul>
-      <li>What you were trying to do</li>
-      <li>What happened instead</li>
-      <li>Device + iOS / macOS / watchOS version</li>
-      <li>Screenshot if relevant</li>
+      <li>Scan a barcode (fast and accurate when the product is in the database)</li>
+      <li>Scan a nutrition label with OCR (works for most US-style facts panels)</li>
+      <li>Take or pick a photo and tap "AI Estimate"</li>
+      <li>Search the USDA / Open Food Facts catalog</li>
+      <li>Type the entry by hand</li>
     </ul>
-    <p>We read every message.</p>
-  </main>
+  </details>
 
-  <footer>
-    <p>&copy; 2026 MacroSight. <a href="/">Home</a> · <a href="/privacy.html">Privacy</a></p>
-  </footer>
+  <h2>AI estimation</h2>
+
+  <details>
+    <summary>Do I need an AI API key?</summary>
+    <p>Only if you want to use the cloud Claude model. The on-device Apple Foundation Model is also available — toggle it in Settings → AI Provider. The on-device option works without any key and never sends data over the network.</p>
+  </details>
+
+  <details>
+    <summary>Where do I get an Anthropic API key?</summary>
+    <p>Sign in at <a href="https://console.anthropic.com/">console.anthropic.com</a> and create a key. Paste it into Settings → AI Provider in MacroSight. The key is stored in the iOS Keychain on your device only.</p>
+  </details>
+
+  <details>
+    <summary>How accurate is the AI estimate?</summary>
+    <p>Pretty good for plated meals with clear visibility, OK for restaurant photos, weak when ingredients are hidden (sauces, mixed bowls). Always treat the result as a starting point and edit if you know the portion better than the model does.</p>
+  </details>
+
+  <details>
+    <summary>Can I delete my AI key?</summary>
+    <p>Yes — Settings → AI Provider → "Remove Key". This wipes the key from the Keychain. Cloud AI estimation will be disabled until you add a new one.</p>
+  </details>
+
+  <h2>Apple Health</h2>
+
+  <details>
+    <summary>What does MacroSight read from Health?</summary>
+    <p>Body weight, BMI, body-fat percentage, and lean body mass — only with your permission, and only to personalize daily macro targets. You can revoke at any time in iOS Settings → Health → Data Access &amp; Devices → MacroSight.</p>
+  </details>
+
+  <details>
+    <summary>What does MacroSight write to Health?</summary>
+    <p>Each food entry's calories, carbohydrates, protein, fat, fiber, and water — if you grant write permission. This lets other Health-compatible apps see your nutrition.</p>
+  </details>
+
+  <details>
+    <summary>I denied Health access. Can I change my mind?</summary>
+    <p>Yes. iOS Settings → Health → Data Access &amp; Devices → MacroSight, then toggle the categories on.</p>
+  </details>
+
+  <h2>Privacy</h2>
+
+  <details>
+    <summary>Where is my food log stored?</summary>
+    <p>In your private CloudKit database — i.e. your iCloud. The developer cannot read it. Apple operates the storage. See the <a href="privacy.html">privacy policy</a> for the full breakdown.</p>
+  </details>
+
+  <details>
+    <summary>How do I export my data?</summary>
+    <p>Settings → Data → Export. The app generates a CSV of every food, supplement, water, and weight entry.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete everything?</summary>
+    <ul>
+      <li>In-app: Settings → Data → Clear all data — wipes the local store and matching CloudKit records.</li>
+      <li>iCloud-side: iOS Settings → Apple ID → iCloud → Manage Storage → MacroSight → Delete Data.</li>
+      <li>Removing the app deletes the local copy.</li>
+    </ul>
+  </details>
+
+  <h2>Watch &amp; widgets</h2>
+
+  <details>
+    <summary>Do I need the iPhone app for the watch app?</summary>
+    <p>No — the watch app is standalone. It pairs more cleanly when both are installed (you'll see today's totals from the phone immediately), but the watch can log meals independently if you prefer.</p>
+  </details>
+
+  <details>
+    <summary>The widget is showing zeros after a fresh install.</summary>
+    <p>Open the app once and log (or import) at least one entry. Widgets refresh from the shared App Group container; the first refresh happens after the first sync.</p>
+  </details>
+
+  <details>
+    <summary>The watch face complication isn't updating.</summary>
+    <p>watchOS budgets complication updates aggressively. Open the watch app once to force-refresh, or wait until the next budgeted reload (typically within an hour).</p>
+  </details>
+
+  <h2>Troubleshooting</h2>
+
+  <details>
+    <summary>Sync seems stuck.</summary>
+    <p>Settings → Data → Sync Status will tell you what CloudKit is doing. Common causes: phone is on cellular with iCloud "Wi-Fi only" set, you're out of iCloud storage, or you signed out of iCloud on this device. The status screen surfaces each of those.</p>
+  </details>
+
+  <details>
+    <summary>Barcode scan can't find a product.</summary>
+    <p>USDA and Open Food Facts don't cover everything (especially regional or store-brand items). Use Label Scan or AI Estimate for unknown products, then tap "Save to Favorites" so the next lookup is instant.</p>
+  </details>
+
+  <details>
+    <summary>Label scan is reading numbers wrong.</summary>
+    <p>OCR struggles with reflective labels, low light, and unusual fonts. Try a flat angle, even lighting, and the rear camera if you used the front. You can always edit the parsed values before saving.</p>
+  </details>
+
+  <details>
+    <summary>The app crashed.</summary>
+    <p>Crashes are rare but they happen. Settings → Send Bug Report attaches diagnostics for us automatically. Including the steps you took helps a lot.</p>
+  </details>
+
+  <h2>Accessibility</h2>
+
+  <details>
+    <summary>Is MacroSight VoiceOver-friendly?</summary>
+    <p>Yes — all interactive controls are labeled. If you find an unlabeled or confusingly-labeled element, please email <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a> with the screen name. Accessibility bugs jump the queue.</p>
+  </details>
+
+  <details>
+    <summary>Does it support Dynamic Type?</summary>
+    <p>Yes, including the larger accessibility sizes. If a screen breaks at the largest sizes, that's a bug — please report it.</p>
+  </details>
+
+  <h2>Still stuck?</h2>
+  <p>Email <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a> with:</p>
+  <ul>
+    <li>What you were trying to do</li>
+    <li>What happened instead</li>
+    <li>Device + iOS / macOS / watchOS version</li>
+    <li>Screenshot if relevant</li>
+  </ul>
+  <p>We read every message.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 MacroSight · <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,80 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MacroSight — Nutrition tracking that respects your privacy</title>
-  <meta name="description" content="MacroSight is a private, AI-assisted nutrition tracker for iPhone, iPad, Mac, and Apple Watch. Your data stays in your iCloud account.">
-  <link rel="canonical" href="https://macrosightapp.github.io/">
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#0a0e1a">
-  <meta property="og:title" content="MacroSight">
-  <meta property="og:description" content="Private, AI-assisted nutrition tracking for Apple devices.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://macrosightapp.github.io/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MacroSight — Precise nutrition tracking, kept private.</title>
+<meta name="description" content="MacroSight is a private, AI-assisted nutrition tracker for iPhone, iPad, Mac, and Apple Watch. Your food log lives in your iCloud — nowhere else.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="canonical" href="https://macrosightapp.com/">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<meta property="og:title" content="MacroSight — Precise nutrition tracking, kept private.">
+<meta property="og:description" content="Private, AI-assisted nutrition tracking for Apple devices.">
+<meta property="og:image" content="https://macrosightapp.com/assets/mac-01.png">
+<meta property="og:url" content="https://macrosightapp.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site">
-    <a href="/" class="brand">MacroSight</a>
-    <nav>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/support.html">Support</a>
+
+<!-- ===== Header ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="assets/icon.png" alt="">
+      <span>MacroSight</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <h1>Nutrition tracking, kept private.</h1>
-    <p class="lede">MacroSight logs your meals, scans labels, and estimates macros from photos — all without sending anything to a server we own.</p>
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">v1.0 · iPhone · iPad · Mac · Apple Watch</span>
+    <h1>Precise nutrition tracking,<br><span class="dim">kept private.</span></h1>
+    <p class="lede">MacroSight logs every meal, scans every label, and estimates macros from a photo — without sending anything to a server we own. Your food log lives in your private iCloud database. We never see it.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#features">See what it does ↓</a>
+      <a class="btn btn-ghost" href="privacy.html">Read the privacy policy</a>
+    </div>
+    <div class="hero-art" aria-label="MacroSight dashboard on macOS">
+      <div class="tabbar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="label">macrosight.app — today</span>
+      </div>
+      <img src="assets/mac-01.png" alt="MacroSight today view on macOS showing calorie and macro totals." loading="eager">
+    </div>
+  </div>
+</section>
 
-    <p>Your food log lives in your private iCloud database. Apple Health stays with Apple Health. Optional AI estimation uses your own Anthropic key or Apple's on-device model.</p>
-
-    <div class="feature-grid" role="list">
-      <div class="feature" role="listitem">
-        <h3>iCloud-native</h3>
-        <p>No login. Your entries sync across iPhone, iPad, Mac, and Watch through your iCloud account.</p>
-      </div>
-      <div class="feature" role="listitem">
-        <h3>Scan, snap, or search</h3>
-        <p>Barcode lookup, OCR-based label scanning, USDA database search, or AI estimation from a meal photo.</p>
-      </div>
-      <div class="feature" role="listitem">
-        <h3>Bring your own AI</h3>
-        <p>Use your Anthropic API key for the cloud Claude model, or toggle Apple's on-device Foundation Model for zero-network estimation.</p>
-      </div>
-      <div class="feature" role="listitem">
-        <h3>Apple Health, both ways</h3>
-        <p>Reads your weight and body composition; writes nutrition back to Health so other apps can use it.</p>
-      </div>
-      <div class="feature" role="listitem">
-        <h3>Watch + widgets</h3>
-        <p>Today's macros on your wrist and on your Home Screen. Glanceable, no taps required.</p>
-      </div>
-      <div class="feature" role="listitem">
-        <h3>No tracking. No ads.</h3>
-        <p>Zero analytics SDKs. No advertising frameworks. No fingerprinting. The privacy report is short on purpose.</p>
-      </div>
+<!-- ===== Features ===== -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">how it works</span>
+      <h2>Six pieces that make tracking actually doable.</h2>
+      <p>Built dense, monospaced, and dark on purpose. Everything you log fits in the same precise grid as everything you've already logged.</p>
     </div>
 
-    <hr>
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="index">01 · capture</div>
+        <h3>Scan, snap, or search</h3>
+        <p>Barcode lookup against USDA + Open Food Facts. OCR for label scans. AI estimation from a meal photo. Search by name when none of the above will do.</p>
+      </article>
 
-    <h2>What we don't do</h2>
-    <ul>
-      <li>We never see your food log. It lives in <em>your</em> private CloudKit database.</li>
-      <li>We don't run analytics. There is no Firebase, Mixpanel, Amplitude, or anything else watching you.</li>
-      <li>We don't sell anything to anyone. There is no ad SDK and no attribution framework.</li>
-      <li>We don't ask for accounts, emails, or phone numbers. Sign in with Apple isn't even an option, because there's nothing to sign into.</li>
-    </ul>
+      <article class="feature">
+        <div class="index">02 · intelligence</div>
+        <h3>Bring your own AI key</h3>
+        <p>Use your Anthropic API key for cloud Claude estimation, or toggle Apple's on-device Foundation Model for zero-network inference. We never proxy through a server we own.</p>
+      </article>
 
-    <p>The full accounting is in our <a href="/privacy.html">privacy policy</a>.</p>
+      <article class="feature">
+        <div class="index">03 · health</div>
+        <h3>HealthKit, both ways</h3>
+        <p>Reads weight and body composition to personalize daily targets. Writes calories, macros, micros, and water back to Health so the rest of your stack can use it.</p>
+      </article>
 
-    <hr>
+      <article class="feature">
+        <div class="index">04 · sync</div>
+        <h3>iCloud-native, no login</h3>
+        <p>Your entries sync across iPhone, iPad, Mac, and Watch through your private CloudKit database. There's no MacroSight account because there's nothing to sign into.</p>
+      </article>
 
-    <h2>Get in touch</h2>
-    <p>Bugs, feature requests, or accessibility feedback go to <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a>. Most questions are probably answered on the <a href="/support.html">support page</a>.</p>
-  </main>
+      <article class="feature">
+        <div class="index">05 · glance</div>
+        <h3>Watch face + widgets</h3>
+        <p>Today's macros on your wrist and on your Home Screen. Lock Screen complications, Live Activities, and a Smart Stack widget that surfaces when you usually log.</p>
+      </article>
 
-  <footer>
-    <p>&copy; 2026 MacroSight. <a href="/privacy.html">Privacy</a> · <a href="/support.html">Support</a></p>
-  </footer>
+      <article class="feature">
+        <div class="index">06 · privacy</div>
+        <h3>Zero trackers, zero ads</h3>
+        <p>No Mixpanel, no Amplitude, no Firebase, no advertising SDKs, no fingerprinting. The privacy report is short because there's nothing to report.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Macro coding system ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">a fixed code</span>
+      <h2>Four colors. Same meaning everywhere.</h2>
+      <p>Macro colors aren't theming — they're a coding system. Once you learn them on the dashboard, every chart, ring, and chip in the app uses them the same way.</p>
+    </div>
+
+    <div class="macros-grid">
+      <div class="macro">
+        <div class="swatch protein"></div>
+        <div class="label">macro 01</div>
+        <div class="name">Protein</div>
+        <div class="hex">#5E6AD2 · indigo</div>
+      </div>
+      <div class="macro">
+        <div class="swatch carbs"></div>
+        <div class="label">macro 02</div>
+        <div class="name">Carbs</div>
+        <div class="hex">#F59E0B · amber</div>
+      </div>
+      <div class="macro">
+        <div class="swatch fat"></div>
+        <div class="label">macro 03</div>
+        <div class="name">Fat</div>
+        <div class="hex">#F87171 · warm red</div>
+      </div>
+      <div class="macro">
+        <div class="swatch fiber"></div>
+        <div class="label">macro 04</div>
+        <div class="name">Fiber</div>
+        <div class="hex">#4ADE80 · green</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Screenshot strip ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">screens</span>
+      <h2>Designed to fade once you've logged the meal.</h2>
+      <p>Dense, fast, monospaced numerals. Optimized for the moment you grab your laptop after dinner and want to be done in eight seconds.</p>
+    </div>
+  </div>
+  <div class="shots-strip" aria-label="App screenshots">
+    <div class="shot"><img loading="lazy" src="assets/mac-02.png" alt="Meal detail with macro breakdown."></div>
+    <div class="shot"><img loading="lazy" src="assets/mac-03.png" alt="Weekly nutrition trends."></div>
+    <div class="shot"><img loading="lazy" src="assets/mac-04.png" alt="AI estimation flow from a meal photo."></div>
+    <div class="shot"><img loading="lazy" src="assets/mac-05.png" alt="Macro targets and goals."></div>
+    <div class="shot"><img loading="lazy" src="assets/mac-06.png" alt="Settings — AI provider and HealthKit."></div>
+    <div class="shot"><img loading="lazy" src="assets/mac-07.png" alt="Focus mode showing today's macros at a glance."></div>
+  </div>
+</section>
+
+<!-- ===== What we don't ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">structural privacy</span>
+      <h2>What we don't do.</h2>
+      <p>The privacy story isn't a marketing claim — it's a property of how the app is built.</p>
+    </div>
+    <div class="dont">
+      <div class="row"><div class="x"></div><div><strong>We never see your food log.</strong><p>It lives in <em>your</em> private CloudKit database. The developer of this app has no read access. Apple operates the storage.</p></div></div>
+      <div class="row"><div class="x"></div><div><strong>We don't run analytics.</strong><p>No Firebase, Mixpanel, Amplitude, Sentry, or homegrown event pipeline. Your usage is invisible to us — by absence, not by promise.</p></div></div>
+      <div class="row"><div class="x"></div><div><strong>We don't sell anything to anyone.</strong><p>There is no ad SDK, no attribution framework, no IDFA request. There's nothing to sell because there's nothing collected.</p></div></div>
+      <div class="row"><div class="x"></div><div><strong>We don't ask for accounts.</strong><p>No email, no phone, no Sign in with Apple. Your iCloud is the account.</p></div></div>
+    </div>
+    <p style="margin-top: var(--sp24); color: var(--text3); font-size: 12.5px;">The full accounting is in the <a href="privacy.html">privacy policy</a>.</p>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="text-align: left; max-width: none;">
+      <h2 style="max-width: none;">Bugs, feature requests, or accessibility feedback —</h2>
+      <p>go to <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a>. Most questions are answered on the <a href="support.html">support page</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 MacroSight · <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a></div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

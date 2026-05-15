@@ -1,108 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy — MacroSight</title>
-  <meta name="description" content="MacroSight's full privacy policy. What we collect (almost nothing), where it lives (your iCloud), and what leaves your device.">
-  <link rel="canonical" href="https://macrosightapp.github.io/privacy.html">
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#0a0e1a">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — MacroSight</title>
+<meta name="description" content="MacroSight's full privacy policy. What we collect (almost nothing), where it lives (your iCloud), and what leaves your device.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="canonical" href="https://macrosightapp.com/privacy.html">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site">
-    <a href="/" class="brand">MacroSight</a>
-    <nav>
-      <a href="/privacy.html" aria-current="page">Privacy</a>
-      <a href="/support.html">Support</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/icon.png" alt="">
+      <span>MacroSight</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="support.html">Support</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
+<section class="page-hero">
+  <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: May 5, 2026 · Contact: <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a></p>
+    <p class="meta">Last updated: 2026-05-14 · Contact: <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a></p>
+  </div>
+</section>
 
-    <p class="lede">MacroSight is a nutrition tracker built so the developer can never see what you eat. This document is the full accounting of what data exists, where it lives, and what leaves your device.</p>
+<main class="prose">
+  <p>MacroSight is a nutrition tracker built so the developer can never see what you eat. This document is the full accounting of what data exists, where it lives, and what leaves your device.</p>
 
-    <h2>1. Information we collect</h2>
-    <p>The app handles four categories of data:</p>
-    <ul>
-      <li><strong>Diet &amp; Nutrition</strong> — food entries you log, including name, brand, serving size, macronutrients, micronutrients, meal type, time, and any notes you attach.</li>
-      <li><strong>Photos</strong> — photos of meals or nutrition labels that you choose to attach to entries.</li>
-      <li><strong>Health &amp; Fitness (Apple Health / HealthKit)</strong> — opt-in integration; nothing happens unless you explicitly grant permission. With your permission MacroSight <em>reads</em> body mass, body mass index, body-fat percentage, lean body mass, dietary energy, dietary protein, dietary carbohydrates, and dietary fat from Apple Health. With your permission MacroSight <em>writes</em> dietary energy, protein, carbohydrates, fat, fiber, sugar, sodium, saturated fat, cholesterol, calcium, iron, potassium, vitamin C, vitamin D, and body mass to Apple Health. You choose which of these categories to share in the system permission sheet, and can revoke any of them at any time in iOS Settings &rarr; Health &rarr; Data Access &amp; Devices &rarr; MacroSight. Health data never leaves your device by way of MacroSight.</li>
-      <li><strong>App Settings</strong> — display preferences (units, photo quality, AI provider choice, your Anthropic API key if you provide one).</li>
-    </ul>
-    <p>That's everything. We do <strong>not</strong> collect: names, email addresses, phone numbers, location, contacts, advertising identifiers, device fingerprints, crash analytics tied to a user, or any third-party SDK telemetry.</p>
+  <h2>1. Information we collect</h2>
+  <p>The app handles four categories of data:</p>
+  <ul>
+    <li><strong>Diet &amp; Nutrition</strong> — food entries you log, including name, brand, serving size, macronutrients, micronutrients, meal type, time, and any notes you attach.</li>
+    <li><strong>Photos</strong> — photos of meals or nutrition labels that you choose to attach to entries.</li>
+    <li><strong>Health &amp; Fitness (Apple Health / HealthKit)</strong> — opt-in integration; nothing happens unless you explicitly grant permission. With your permission MacroSight <em>reads</em> body mass, body mass index, body-fat percentage, lean body mass, dietary energy, dietary protein, dietary carbohydrates, and dietary fat from Apple Health. With your permission MacroSight <em>writes</em> dietary energy, protein, carbohydrates, fat, fiber, sugar, sodium, saturated fat, cholesterol, calcium, iron, potassium, vitamin C, vitamin D, and body mass to Apple Health. You choose which of these categories to share in the system permission sheet, and can revoke any of them at any time in iOS Settings → Health → Data Access &amp; Devices → MacroSight. Health data never leaves your device by way of MacroSight.</li>
+    <li><strong>App Settings</strong> — display preferences (units, photo quality, AI provider choice, your Anthropic API key if you provide one).</li>
+  </ul>
+  <p>That's everything. We do <strong>not</strong> collect: names, email addresses, phone numbers, location, contacts, advertising identifiers, device fingerprints, crash analytics tied to a user, or any third-party SDK telemetry.</p>
 
-    <h2>2. Where your data lives</h2>
-    <ul>
-      <li><strong>Diet, photos, and weight entries</strong> are stored in your private CloudKit database — i.e. your iCloud account. Apple operates this storage; the developer of MacroSight cannot read or query it. CloudKit treats this data the same way it treats your iCloud Photos.</li>
-      <li><strong>App settings (incl. AI API key)</strong> are stored on-device in the iOS Keychain and synced across your devices via iCloud Key-Value Store. The Keychain is encrypted at rest and accessible only to MacroSight itself.</li>
-      <li><strong>Health data</strong> is stored in Apple Health. MacroSight reads/writes it only with your explicit permission, granted in Settings → Health.</li>
-    </ul>
+  <h2>2. Where your data lives</h2>
+  <ul>
+    <li><strong>Diet, photos, and weight entries</strong> are stored in your private CloudKit database — i.e. your iCloud account. Apple operates this storage; the developer of MacroSight cannot read or query it. CloudKit treats this data the same way it treats your iCloud Photos.</li>
+    <li><strong>App settings (incl. AI API key)</strong> are stored on-device in the iOS Keychain and synced across your devices via iCloud Key-Value Store. The Keychain is encrypted at rest and accessible only to MacroSight itself.</li>
+    <li><strong>Health data</strong> is stored in Apple Health. MacroSight reads/writes it only with your explicit permission, granted in Settings → Health.</li>
+  </ul>
 
-    <h2>3. What leaves your device</h2>
-    <ul>
-      <li><strong>AI Estimate</strong> — when you tap "AI Estimate" on a meal photo, the photo and a short prompt are sent to Anthropic's Claude API. Per Anthropic's API policy, inputs are not used to train their models. You can disable AI estimation entirely by removing your API key, or opt to use Apple's on-device Foundation Model (no network) instead.</li>
-      <li><strong>Catalog search (USDA / Open Food Facts)</strong> — when you search for a food or scan a barcode, the query is sent to a Vercel proxy that forwards it to USDA FoodData Central or directly to Open Food Facts. These requests contain only the search term or barcode. They do <strong>not</strong> contain a user identifier, account info, or anything that could associate the lookup with you.</li>
-      <li><strong>Vitalis sync (optional)</strong> — if you have the developer's other app, Vitalis, installed on the same iCloud account and you leave "Sync with Vitalis" enabled in Settings, today's macros are written to a shared iCloud Key-Value namespace so Vitalis can display them. The data never leaves Apple's servers.</li>
-      <li><strong>iCloud sync (CloudKit)</strong> — your diet entries are mirrored between your Apple devices via Apple's CloudKit. They never touch any developer-owned server.</li>
-    </ul>
-    <p>That's the complete list of network endpoints MacroSight contacts.</p>
+  <h2>3. What leaves your device</h2>
+  <ul>
+    <li><strong>AI Estimate</strong> — when you tap "AI Estimate" on a meal photo, the photo and a short prompt are sent to Anthropic's Claude API. Per Anthropic's API policy, inputs are not used to train their models. You can disable AI estimation entirely by removing your API key, or opt to use Apple's on-device Foundation Model (no network) instead.</li>
+    <li><strong>Catalog search (USDA / Open Food Facts)</strong> — when you search for a food or scan a barcode, the query is sent to a Vercel proxy that forwards it to USDA FoodData Central or directly to Open Food Facts. These requests contain only the search term or barcode. They do <strong>not</strong> contain a user identifier, account info, or anything that could associate the lookup with you.</li>
+    <li><strong>Vitalis sync (optional)</strong> — if you have the developer's other app, Vitalis, installed on the same iCloud account and you leave "Sync with Vitalis" enabled in Settings, today's macros are written to a shared iCloud Key-Value namespace so Vitalis can display them. The data never leaves Apple's servers.</li>
+    <li><strong>iCloud sync (CloudKit)</strong> — your diet entries are mirrored between your Apple devices via Apple's CloudKit. They never touch any developer-owned server.</li>
+  </ul>
+  <p>That's the complete list of network endpoints MacroSight contacts.</p>
 
-    <h2>4. Tracking and advertising</h2>
-    <p>MacroSight does not track you. No analytics SDKs (Firebase, Mixpanel, Amplitude, etc.), no advertising SDKs, no third-party fingerprinting libraries, no attribution networks. The app does not request the App Tracking Transparency permission because it has nothing to track.</p>
+  <h2>4. Tracking and advertising</h2>
+  <p>MacroSight does not track you. No analytics SDKs (Firebase, Mixpanel, Amplitude, etc.), no advertising SDKs, no third-party fingerprinting libraries, no attribution networks. The app does not request the App Tracking Transparency permission because it has nothing to track.</p>
 
-    <h2>5. Children</h2>
-    <p>MacroSight is rated 4+ in the App Store. It does not knowingly collect data about anyone, including children, because it does not collect data at all beyond what's needed to run the app on your own device.</p>
+  <h2>5. Children</h2>
+  <p>MacroSight is rated 4+ in the App Store. It does not knowingly collect data about anyone, including children, because it does not collect data at all beyond what's needed to run the app on your own device.</p>
 
-    <h2>6. Your rights and how to exercise them</h2>
-    <ul>
-      <li><strong>See everything we have on you:</strong> Settings → Data → Export. Produces a CSV of every food entry, supplement, weight, and water log.</li>
-      <li><strong>Delete everything:</strong>
-        <ul>
-          <li>In-app: Settings → Data → Clear all data (wipes the local store and the matching CloudKit records).</li>
-          <li>iCloud-side cleanup: iOS Settings → Apple ID → iCloud → Manage Storage → MacroSight → Delete Data.</li>
-          <li>Removing the app deletes the local copy.</li>
-        </ul>
-      </li>
-      <li><strong>Stop AI estimation:</strong> delete your Anthropic API key in Settings → AI Provider, or disable the on-device toggle.</li>
-      <li><strong>Stop Health integration:</strong> revoke any category in iOS Settings → Health → Data Access &amp; Devices → MacroSight.</li>
-    </ul>
-    <p>You don't need to email anyone or open a ticket — every operation above is available directly in the app or in iOS Settings.</p>
+  <h2>6. Your rights and how to exercise them</h2>
+  <ul>
+    <li><strong>See everything we have on you:</strong> Settings → Data → Export. Produces a CSV of every food entry, supplement, weight, and water log.</li>
+    <li><strong>Delete everything:</strong>
+      <ul>
+        <li>In-app: Settings → Data → Clear all data (wipes the local store and the matching CloudKit records).</li>
+        <li>iCloud-side cleanup: iOS Settings → Apple ID → iCloud → Manage Storage → MacroSight → Delete Data.</li>
+        <li>Removing the app deletes the local copy.</li>
+      </ul>
+    </li>
+    <li><strong>Stop AI estimation:</strong> delete your Anthropic API key in Settings → AI Provider, or disable the on-device toggle.</li>
+    <li><strong>Stop Health integration:</strong> revoke any category in iOS Settings → Health → Data Access &amp; Devices → MacroSight.</li>
+  </ul>
+  <p>You don't need to email anyone or open a ticket — every operation above is available directly in the app or in iOS Settings.</p>
 
-    <h2>7. Data retention</h2>
-    <p>MacroSight does not retain anything on its own servers because it does not have any. Your data persists in your iCloud account until you delete it. Anthropic and the USDA may log API requests according to their own policies; those policies are linked below.</p>
-    <ul>
-      <li><a href="https://www.anthropic.com/legal/privacy">Anthropic API privacy</a></li>
-      <li><a href="https://fdc.nal.usda.gov/api-guide">USDA FoodData Central terms</a></li>
-      <li><a href="https://world.openfoodfacts.org/terms-of-use">Open Food Facts terms of use</a></li>
-    </ul>
+  <h2>7. Data retention</h2>
+  <p>MacroSight does not retain anything on its own servers because it does not have any. Your data persists in your iCloud account until you delete it. Anthropic and the USDA may log API requests according to their own policies; those policies are linked below.</p>
+  <ul>
+    <li><a href="https://www.anthropic.com/legal/privacy">Anthropic API privacy</a></li>
+    <li><a href="https://fdc.nal.usda.gov/api-guide">USDA FoodData Central terms</a></li>
+    <li><a href="https://world.openfoodfacts.org/terms-of-use">Open Food Facts terms of use</a></li>
+  </ul>
 
-    <h2>8. Security</h2>
-    <ul>
-      <li>All network requests use HTTPS with the system default Transport Security Settings (no exceptions, no certificate pinning bypass).</li>
-      <li>Your Anthropic API key is stored in the iOS Keychain, which uses hardware-backed encryption.</li>
-      <li>The app contains no embedded secrets — third-party API keys live on a server the developer controls (or in your own Keychain in the case of Anthropic).</li>
-    </ul>
+  <h2>8. Security</h2>
+  <ul>
+    <li>All network requests use HTTPS with the system default Transport Security Settings (no exceptions, no certificate pinning bypass).</li>
+    <li>Your Anthropic API key is stored in the iOS Keychain, which uses hardware-backed encryption.</li>
+    <li>The app contains no embedded secrets — third-party API keys live on a server the developer controls (or in your own Keychain in the case of Anthropic).</li>
+  </ul>
 
-    <h2>9. Changes to this policy</h2>
-    <p>If this policy materially changes, we'll bump the "Last updated" date at the top and surface the change in the app on next launch.</p>
+  <h2>9. Changes to this policy</h2>
+  <p>If this policy materially changes, we'll bump the "Last updated" date at the top and surface the change in the app on next launch.</p>
 
-    <h2>10. Attributions</h2>
-    <ul>
-      <li><strong>USDA FoodData Central</strong> &mdash; nutrition data and barcode lookups for US-marketed products. Public-domain US Government work; no licence required, attribution provided as best practice. See <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</li>
-      <li><strong>Open Food Facts</strong> &mdash; international barcode and product database, used as a fallback when USDA returns no result. Licensed under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) v1.0</a>; we credit Open Food Facts wherever its data is shown to comply with that licence. See <a href="https://world.openfoodfacts.org/">world.openfoodfacts.org</a>.</li>
-      <li><strong>Anthropic Claude API</strong> &mdash; powers AI-based nutrition estimation when you supply your own API key. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</li>
-      <li><strong>Apple HealthKit</strong> &mdash; device-side framework for the Apple Health integration described above. Apple, Apple Health, and HealthKit are trademarks of Apple Inc.</li>
-    </ul>
+  <h2>10. Attributions</h2>
+  <ul>
+    <li><strong>USDA FoodData Central</strong> — nutrition data and barcode lookups for US-marketed products. Public-domain US Government work; no licence required, attribution provided as best practice. See <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</li>
+    <li><strong>Open Food Facts</strong> — international barcode and product database, used as a fallback when USDA returns no result. Licensed under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) v1.0</a>; we credit Open Food Facts wherever its data is shown to comply with that licence. See <a href="https://world.openfoodfacts.org/">world.openfoodfacts.org</a>.</li>
+    <li><strong>Anthropic Claude API</strong> — powers AI-based nutrition estimation when you supply your own API key. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</li>
+    <li><strong>Apple HealthKit</strong> — device-side framework for the Apple Health integration described above. Apple, Apple Health, and HealthKit are trademarks of Apple Inc.</li>
+  </ul>
 
-    <h2>11. Contact</h2>
-    <p>Questions, complaints, or requests: <a href="mailto:support@macrosightapp.com"><strong>support@macrosightapp.com</strong></a></p>
-  </main>
+  <h2>11. Contact</h2>
+  <p>Questions, complaints, or requests: <a href="mailto:support@macrosightapp.com"><strong>support@macrosightapp.com</strong></a></p>
+</main>
 
-  <footer>
-    <p>&copy; 2026 MacroSight. <a href="/">Home</a> · <a href="/support.html">Support</a></p>
-  </footer>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>© 2026 MacroSight · <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
