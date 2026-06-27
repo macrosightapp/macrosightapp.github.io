@@ -7,9 +7,22 @@
   "name": "macrosight",
   "compatibility_date": "2026-05-14",
   "main": "./src/index.js",
+  // Both hostnames are served as custom domains. NOTE: wrangler treats this
+  // routes list as the full set of custom domains for the Worker — every
+  // hostname that should resolve MUST be listed here, or a deploy will remove
+  // the omitted ones (and their DNS records). The HTML canonicals point at the
+  // apex, so it must resolve; www is the historically advertised host.
+  "routes": [
+    { "pattern": "macrosightapp.com", "custom_domain": true },
+    { "pattern": "www.macrosightapp.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // Run the Worker before serving a matching asset so src/index.js can
+    // attach security headers to every response. Without this, Cloudflare
+    // serves static files directly and the Worker never executes.
+    "run_worker_first": true
   }
 }

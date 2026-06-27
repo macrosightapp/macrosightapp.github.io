@@ -28,7 +28,7 @@
 <section class="page-hero">
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: 2026-05-14 · Contact: <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a></p>
+    <p class="meta">Last updated: 2026-06-26 · Contact: <a href="mailto:support@macrosightapp.com">support@macrosightapp.com</a></p>
   </div>
 </section>
 
@@ -48,7 +48,8 @@
   <h2>2. Where your data lives</h2>
   <ul>
     <li><strong>Diet, photos, and weight entries</strong> are stored in your private CloudKit database — i.e. your iCloud account. Apple operates this storage; the developer of MacroSight cannot read or query it. CloudKit treats this data the same way it treats your iCloud Photos.</li>
-    <li><strong>App settings (incl. AI API key)</strong> are stored on-device in the iOS Keychain and synced across your devices via iCloud Key-Value Store. The Keychain is encrypted at rest and accessible only to MacroSight itself.</li>
+    <li><strong>Your AI API key</strong> is stored on-device in the iOS Keychain and, if you use more than one device, synced between them via <strong>iCloud Keychain, which is end-to-end encrypted</strong> — meaning not even Apple can read it. It is accessible only to MacroSight itself.</li>
+    <li><strong>Other app settings</strong> (units, photo quality, AI-provider choice, and similar display preferences) are stored locally on each device. None of these contain personal information.</li>
     <li><strong>Health data</strong> is stored in Apple Health. MacroSight reads/writes it only with your explicit permission, granted in Settings → Health.</li>
   </ul>
 
@@ -56,7 +57,7 @@
   <ul>
     <li><strong>AI Estimate</strong> — when you tap "AI Estimate" on a meal photo, the photo and a short prompt are sent to Anthropic's Claude API. Per Anthropic's API policy, inputs are not used to train their models. You can disable AI estimation entirely by removing your API key, or opt to use Apple's on-device Foundation Model (no network) instead.</li>
     <li><strong>Catalog search (USDA / Open Food Facts)</strong> — when you search for a food or scan a barcode, the query is sent to a Vercel proxy that forwards it to USDA FoodData Central or directly to Open Food Facts. These requests contain only the search term or barcode. They do <strong>not</strong> contain a user identifier, account info, or anything that could associate the lookup with you.</li>
-    <li><strong>Vitalis sync (optional)</strong> — if you have the developer's other app, Vitalis, installed on the same iCloud account and you leave "Sync with Vitalis" enabled in Settings, today's macros are written to a shared iCloud Key-Value namespace so Vitalis can display them. The data never leaves Apple's servers.</li>
+    <li><strong>Vitalis sync (optional)</strong> — if you have the developer's other app, Vitalis, installed on the same iCloud account and you leave "Sync with Vitalis" enabled in Settings (you can turn it off at any time), today's nutrition is written to a shared iCloud Key-Value namespace so Vitalis can display and correlate it. This includes your daily macro totals and goals <em>and a list of today's individual meals</em> — each meal's name, time, and macros (photos are never included). This stays within your own iCloud account and never leaves Apple's servers; note that iCloud Key-Value storage is encrypted in transit and at rest under Apple-managed keys, rather than end-to-end encrypted like the Keychain. Turning the toggle off stops these writes.</li>
     <li><strong>iCloud sync (CloudKit)</strong> — your diet entries are mirrored between your Apple devices via Apple's CloudKit. They never touch any developer-owned server.</li>
   </ul>
   <p>That's the complete list of network endpoints MacroSight contacts.</p>
@@ -95,6 +96,7 @@
     <li>All network requests use HTTPS with the system default Transport Security Settings (no exceptions, no certificate pinning bypass).</li>
     <li>Your Anthropic API key is stored in the iOS Keychain, which uses hardware-backed encryption.</li>
     <li>The app contains no embedded secrets — third-party API keys live on a server the developer controls (or in your own Keychain in the case of Anthropic).</li>
+    <li>The food-search proxy and this website send a strict set of HTTP security headers (HSTS, Content-Security-Policy, and frame/MIME protections) on every response, and the food-search service accepts requests only over an authenticated, rotatable channel. None of these requests carry a user identifier.</li>
   </ul>
 
   <h2>9. Changes to this policy</h2>
